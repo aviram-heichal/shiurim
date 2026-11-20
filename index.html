@@ -52,7 +52,7 @@ input:focus{outline:none;border-color:var(--gold)}
 </div>
 <script>
 'use strict';
-var API = "https://script.google.com/macros/s/AKfycbz1lb2NuMlqOjFGktw935RoOO8HM-aQjK8U2xuLUegoz1Yc5OstxPYgiG0ILwT1YiFs/exec", APP = "a-6050857415.bin", ACCT = 'shiurim-acct';
+var API = "https://script.google.com/macros/s/AKfycbz1lb2NuMlqOjFGktw935RoOO8HM-aQjK8U2xuLUegoz1Yc5OstxPYgiG0ILwT1YiFs/exec", APP = "a-990fc02ead.bin", ACCT = 'shiurim-acct';
 function $(i) { return document.getElementById(i); }
 function b64(s) { var b = atob(s), u = new Uint8Array(b.length); for (var i = 0; i < b.length; i++) u[i] = b.charCodeAt(i); return u; }
 function getAcct() { try { return JSON.parse(localStorage.getItem(ACCT) || 'null'); } catch (e) { return null; } }
@@ -69,7 +69,7 @@ window.openBin = function (name, key) {
 function launch(a) {
   $('box').hidden = true; $('loading').hidden = false;
   return window.openBin(APP, a.key).then(function (html) {
-    window.SHIURIM = { api: API, openBin: window.openBin };
+    window.SHIURIM = { api: API, openBin: window.openBin }; try { sessionStorage.setItem('shiurim-bin', APP); } catch (e) {}
     document.open(); document.write(html); document.close();
   });
 }
