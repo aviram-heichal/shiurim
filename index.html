@@ -48,11 +48,11 @@ input:focus{outline:none;border-color:var(--gold)}
     <div class="err" id="err" role="alert"></div>
   </form>
   <div class="help">שכחתם סיסמה? שלחו לנו הודעה בווטסאפ ונשלח לכם סיסמה חדשה.</div>
-  <div class="brand">אבירם היכל · העוצמה בחינוך</div>
+  <div class="brand">אבירם היכל · העוצמה בחינוך<br>© כל הזכויות שמורות לאבירם היכל</div>
 </div>
 <script>
 'use strict';
-var API = "https://script.google.com/macros/s/AKfycbz1lb2NuMlqOjFGktw935RoOO8HM-aQjK8U2xuLUegoz1Yc5OstxPYgiG0ILwT1YiFs/exec", APP = "a-c5b7f30647.bin", ACCT = 'shiurim-acct';
+var API = "https://script.google.com/macros/s/AKfycbz1lb2NuMlqOjFGktw935RoOO8HM-aQjK8U2xuLUegoz1Yc5OstxPYgiG0ILwT1YiFs/exec", APP = "a-6050857415.bin", ACCT = 'shiurim-acct';
 function $(i) { return document.getElementById(i); }
 function b64(s) { var b = atob(s), u = new Uint8Array(b.length); for (var i = 0; i < b.length; i++) u[i] = b.charCodeAt(i); return u; }
 function getAcct() { try { return JSON.parse(localStorage.getItem(ACCT) || 'null'); } catch (e) { return null; } }
