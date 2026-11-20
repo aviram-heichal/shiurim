@@ -52,7 +52,7 @@ input:focus{outline:none;border-color:var(--gold)}
 </div>
 <script>
 'use strict';
-var API = "https://script.google.com/macros/s/AKfycbz1lb2NuMlqOjFGktw935RoOO8HM-aQjK8U2xuLUegoz1Yc5OstxPYgiG0ILwT1YiFs/exec", APP = "a-0d6f2befaa.bin", ACCT = 'shiurim-acct';
+var API = "https://script.google.com/macros/s/AKfycbz1lb2NuMlqOjFGktw935RoOO8HM-aQjK8U2xuLUegoz1Yc5OstxPYgiG0ILwT1YiFs/exec", APP = "a-6c1b336c8c.bin", ACCT = 'shiurim-acct';
 function $(i) { return document.getElementById(i); }
 function b64(s) { var b = atob(s), u = new Uint8Array(b.length); for (var i = 0; i < b.length; i++) u[i] = b.charCodeAt(i); return u; }
 function getAcct() { try { return JSON.parse(localStorage.getItem(ACCT) || 'null'); } catch (e) { return null; } }
